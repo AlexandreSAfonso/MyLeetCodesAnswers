@@ -1,0 +1,14 @@
+import asyncio
+
+async def do_work():
+    print("Starting work")
+    await asyncio.sleep(2)
+    print("Work finished")
+
+async def main():
+    task1 = asyncio.create_task(do_work())
+    task2 = asyncio.create_task(do_work())
+    await task1
+    await task2
+
+asyncio.run(main())

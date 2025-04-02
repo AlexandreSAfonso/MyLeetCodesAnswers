@@ -1,0 +1,16 @@
+  
+
+def exist(self, board: List[List[str]], word: str) -> bool:
+   
+
+
+if __name__ == '__main__':
+
+    board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
+    
+    word = "ABCCED"
+    word = "SEE"
+    word = "ABCB"
+
+    k= exist(board)
+    print("Número de elementos restantes:",k)

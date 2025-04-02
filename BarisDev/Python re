@@ -1,0 +1,27 @@
+import re
+
+text = "abc123def456ghi"
+
+print(f"matches from {text}")
+
+pattern = r"(?:abc)\d+"
+matches = re.findall(pattern, text)
+print(matches)
+
+
+print("matches end ---------------------------------")
+
+
+
+text = "Hello 123! @World"
+
+print(f"print from '{text}'")
+
+print(re.findall(r"\d+", text))  # Captura números → ['123']
+print(re.findall(r"\D+", text))  # Captura NÃO-números → ['Hello ', '! @World']
+
+print(re.findall(r"\w+", text))  # Captura palavras → ['Hello', '123', 'World']
+print(re.findall(r"\W+", text))  # Captura símbolos e espaços → [' ', '! @']
+
+print(re.findall(r"\s+", text))  # Captura espaços → ['  ']
+print(re.findall(r"\S+", text))  # Captura NÃO-espaços → ['Hello', '123!', '@World']
